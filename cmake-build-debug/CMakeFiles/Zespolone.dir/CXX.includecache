@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.cpp
+Zespolona.h
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
+cmath
+-
+iostream
+-
+
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
+iostream
+-
+
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/main.cpp
+iostream
+-
+cmath
+-
+Zespolona.h
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
+fstream
+-
+

@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Zespolone.dir/main.cpp.o CMakeFiles/Zespolone.dir/Zespolona.cpp.o  -o Zespolone.exe -Wl,--out-implib,libZespolone.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
