@@ -1,6 +1,8 @@
 #include "Zespolona.h"
 #include <cmath>
 #include <iostream>
+#include <string>
+#include <sstream>
 
 Zespolona::Zespolona(float real, float imaginary)
 {
@@ -134,8 +136,13 @@ std::istream& operator>> (std::istream &is, Zespolona &z1)
 {
     char c; // wczytywany znak
     float tmp; // zmienna przechowujaca wartosc tymczasowa
+    std::string s;
+    std::stringstream ss;
 
-    is >> c; // Wczytaj znak z podanego strumienia
+    is >> s;
+    ss.str (s);
+
+    ss >> c; // Wczytaj znak z podanego strumienia
     /* Sprawdz czy podana liczba zespolona jest wpisana w poprawnym formacie
 *   Podana liczba zespolona musi zawierać znaak "(" na poczatki */
     if (c != '(')
@@ -144,14 +151,14 @@ std::istream& operator>> (std::istream &is, Zespolona &z1)
     }
 
     /* Wczytaj czesc rzeczywista z podanego strumienia */
-    is >> tmp;
+    ss >> tmp;
     z1.SetReal(tmp);
 
     /* Wczytaj czesc urojona z podanego strumienia */
-    is >> tmp;
+    ss >> tmp;
     z1.SetImaginary(tmp);
 
-    is >> c; // Wczytaj nastepny znak
+    ss >> c; // Wczytaj nastepny znak
     /* Sprawdz czy podana liczba zespolona jest wpisana w poprawnym formacie
      * Podana liczba zespolona musi zawierać znak "i" przy czesci urojonej
      * np. (4+4i)*/
@@ -160,7 +167,7 @@ std::istream& operator>> (std::istream &is, Zespolona &z1)
         throw "zla liczba zespolona"; // Jesli nie - poinformuj o bledzie
     }
 
-    is >> c; // Wczytaj nastepny znak
+    ss >> c; // Wczytaj nastepny znak
     /* Sprawdz czy podana liczba zespolona jest wpisana w poprawnym formacie
     * Podana liczba zespolona musi zawierać znaak ")" na końcu */
     if (c != ')')
