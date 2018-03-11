@@ -5,6 +5,26 @@
 
 using namespace std;
 
+Zespolona pytaj()
+{
+    Zespolona liczba(0,0);
+
+    for (int i = 0; i < 3; ++i)
+    {
+        try
+        {
+            cout << "Podaj wynik: ";
+            cin >> liczba;
+
+            return liczba;
+        }
+        catch (...)
+        {
+            cout << "Podano zla liczbe zespolona " << endl;
+        }
+    }
+}
+
 int main()
 {
     Zespolona z1(0,0);
@@ -31,14 +51,16 @@ int main()
                 bazaLatwa >> z1;
                 bazaLatwa >> ope;
                 bazaLatwa >> z2;
+            }
+            catch (...)
+            {
+                cout << "Blad wczytywania liczby zespolonej" << endl;
+            }
 
-                sumaPytan++;
+            sumaPytan++;
+            cout << z1 << ope << z2 << endl;
 
-                cout << z1 << ope << z2 << endl;
-
-                cout << "Podaj wynik: ";
-                cin >> wynik;
-
+            pytaj();
 
                 switch (ope)
                 {
@@ -75,11 +97,7 @@ int main()
                     cout << "Bledny wynik" << endl;
                     cout << "Poprawny wynik to: " << poprawnyWynik << endl << endl;
                 }
-            }
-            catch (...)
-            {
-                cout << "Blad wczytywania liczby zespolonej" << endl;
-            }
+
         }
     }
     bazaLatwa.close();
