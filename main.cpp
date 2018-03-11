@@ -34,8 +34,8 @@ int main(int argc, char **argv)
     Zespolona poprawnyWynik(0,0);
     int sumaPytan = 0;
     int poprawne = 0;
-    char ope;
     int c;
+    char ope;
     bool czyPoprawnyWynik;
     ifstream bazaPytan;
 
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
         switch (c) /* c - wczytany argument */
         {
             case 'l':
-                bazaPytan.open( "BazaLatwa2.txt");
+                bazaPytan.open( "BazaLatwa.txt");
                 break;
 
             case 't':
@@ -57,7 +57,7 @@ int main(int argc, char **argv)
 
     if(bazaPytan.is_open())
     {
-        cout << "OTWARTO PLIK" << endl;
+        cout << "OTWARTO PLIK: " << endl;
 
         while (!bazaPytan.eof())
         {
@@ -75,44 +75,44 @@ int main(int argc, char **argv)
             sumaPytan++;
             cout << z1 << ope << z2 << endl;
 
-            pytaj();
+            wynik = pytaj();
 
-                switch (ope)
-                {
-                    case '+':
-                        poprawnyWynik = z1 + z2;
-                        czyPoprawnyWynik = (wynik == poprawnyWynik);
-                        break;
+            switch (ope)
+            {
+                case '+':
+                    poprawnyWynik = z1 + z2;
+                    czyPoprawnyWynik = (wynik == poprawnyWynik);
+                    break;
 
-                    case '-':
-                        poprawnyWynik = z1 - z2;
-                        czyPoprawnyWynik = (wynik == poprawnyWynik);
-                        break;
+                case '-':
+                    poprawnyWynik = z1 - z2;
+                    czyPoprawnyWynik = (wynik == poprawnyWynik);
+                    break;
 
-                    case '/':
-                        poprawnyWynik = z1 / z2;
-                        czyPoprawnyWynik = (wynik == poprawnyWynik);
-                        break;
+                case '/':
+                    poprawnyWynik = z1 / z2;
+                    czyPoprawnyWynik = (wynik == poprawnyWynik);
+                    break;
 
-                    case '*':
-                        poprawnyWynik = z1 * z2;
-                        czyPoprawnyWynik = (wynik == poprawnyWynik);
-                        break;
+                case '*':
+                    poprawnyWynik = z1 * z2;
+                    czyPoprawnyWynik = (wynik == poprawnyWynik);
+                    break;
 
-                    default:
-                        cout << "Bledny operator";
-                        break;
-                }
+                default:
+                    cout << "Bledny operator";
+                    break;
+            }
 
-                if(czyPoprawnyWynik)
-                {
-                    cout << "Poprawny wynik" << endl << endl;
-                    poprawne++;
-                } else
-                {
-                    cout << "Bledny wynik" << endl;
-                    cout << "Poprawny wynik to: " << poprawnyWynik << endl << endl;
-                }
+            if(czyPoprawnyWynik)
+            {
+                cout << "Poprawny wynik" << endl << endl;
+                poprawne++;
+            } else
+            {
+                cout << "Bledny wynik" << endl;
+                cout << "Poprawny wynik to: " << poprawnyWynik << endl << endl;
+            }
 
         }
     }
