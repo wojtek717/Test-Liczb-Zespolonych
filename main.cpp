@@ -2,6 +2,7 @@
 #include <cmath>
 #include "Zespolona.h"
 #include <fstream>
+#include <getopt.h>
 
 using namespace std;
 
@@ -25,7 +26,7 @@ Zespolona pytaj()
     }
 }
 
-int main()
+int main(int argc, char **argv)
 {
     Zespolona z1(0,0);
     Zespolona z2(0,0);
@@ -34,23 +35,37 @@ int main()
     int sumaPytan = 0;
     int poprawne = 0;
     char ope;
+    int c;
     bool czyPoprawnyWynik;
-    ifstream bazaLatwa;
+    ifstream bazaPytan;
 
+    while ((c = getopt (argc, argv, "lt")) != -1)
+        switch (c) /* c - wczytany argument */
+        {
+            case 'l':
+                bazaPytan.open( "BazaLatwa2.txt");
+                break;
 
-    bazaLatwa.open( "BazaLatwa2.txt");
+            case 't':
+                bazaPytan.open( "BazaTrudna.txt");
+                break;
 
-    if(bazaLatwa.is_open())
+            default:
+                cout << "Podano zly parametr" << endl;
+                break;
+        }
+
+    if(bazaPytan.is_open())
     {
         cout << "OTWARTO PLIK" << endl;
 
-        while (!bazaLatwa.eof())
+        while (!bazaPytan.eof())
         {
             try
             {
-                bazaLatwa >> z1;
-                bazaLatwa >> ope;
-                bazaLatwa >> z2;
+                bazaPytan >> z1;
+                bazaPytan >> ope;
+                bazaPytan >> z2;
             }
             catch (...)
             {
@@ -86,6 +101,7 @@ int main()
 
                     default:
                         cout << "Bledny operator";
+                        break;
                 }
 
                 if(czyPoprawnyWynik)
@@ -100,7 +116,7 @@ int main()
 
         }
     }
-    bazaLatwa.close();
+    bazaPytan.close();
 
     cout << "Suma pytan: " << sumaPytan << endl;
     cout << "Poprawne odpowiedzi: " << poprawne << endl;
