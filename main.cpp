@@ -10,13 +10,15 @@ int main()
     Zespolona z1(0,0);
     Zespolona z2(0,0);
     Zespolona wynik(0,0);
+    Zespolona poprawnyWynik(0,0);
     int sumaPytan = 0;
     int poprawne = 0;
     char ope;
+    bool czyPoprawnyWynik;
     ifstream bazaLatwa;
 
 
-    bazaLatwa.open( "BazaLatwa.txt");
+    bazaLatwa.open( "BazaLatwa2.txt");
 
     if(bazaLatwa.is_open())
     {
@@ -37,14 +39,41 @@ int main()
                 cout << "Podaj wynik: ";
                 cin >> wynik;
 
-                if (z1 + z2 == wynik)
+
+                switch (ope)
+                {
+                    case '+':
+                        poprawnyWynik = z1 + z2;
+                        czyPoprawnyWynik = (wynik == poprawnyWynik);
+                        break;
+
+                    case '-':
+                        poprawnyWynik = z1 - z2;
+                        czyPoprawnyWynik = (wynik == poprawnyWynik);
+                        break;
+
+                    case '/':
+                        poprawnyWynik = z1 / z2;
+                        czyPoprawnyWynik = (wynik == poprawnyWynik);
+                        break;
+
+                    case '*':
+                        poprawnyWynik = z1 * z2;
+                        czyPoprawnyWynik = (wynik == poprawnyWynik);
+                        break;
+
+                    default:
+                        cout << "Bledny operator";
+                }
+
+                if(czyPoprawnyWynik)
                 {
                     cout << "Poprawny wynik" << endl << endl;
                     poprawne++;
                 } else
                 {
                     cout << "Bledny wynik" << endl;
-                    cout << "Poprawny wynik: " << z1 + z2 << endl << endl;
+                    cout << "Poprawny wynik to: " << poprawnyWynik << endl << endl;
                 }
             }
             catch (...)
