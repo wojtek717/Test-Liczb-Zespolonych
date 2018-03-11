@@ -13,6 +13,10 @@ cmath
 -
 iostream
 -
+string
+-
+sstream
+-
 
 /cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
 iostream
