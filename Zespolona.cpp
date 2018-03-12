@@ -136,11 +136,11 @@ std::istream& operator>> (std::istream &is, Zespolona &z1)
 {
     char c; // wczytywany znak
     float tmp; // zmienna przechowujaca wartosc tymczasowa
-    std::string s;
-    std::stringstream ss;
+    std::string s; //Zmienna przechowujaca wczytane wyrazenie zespolone
+    std::stringstream ss; //Sting jako strumien
 
-    is >> s;
-    ss.str (s);
+    is >> s; //Wczytanie wyrazenia zespolonego
+    ss.str (s); //Zmienna s jako strumien
 
     ss >> c; // Wczytaj znak z podanego strumienia
     /* Sprawdz czy podana liczba zespolona jest wpisana w poprawnym formacie
