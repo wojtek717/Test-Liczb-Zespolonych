@@ -181,6 +181,6 @@ bool operator == (Zespolona z1, Zespolona z2)
     /* Zwroc wynik porownania dwoch liczb zespolonych */
     return (
             (z1.GetReal() == z2.GetReal()) && // Porownaj czesci rzeczywiste
-           (z2.GetImaginary() == z2.GetImaginary()) // Porownaj czesci urojone
+           (z1.GetImaginary() == z2.GetImaginary()) // Porownaj czesci urojone
     );
 }

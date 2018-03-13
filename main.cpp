@@ -105,11 +105,15 @@ int main(int argc, char **argv)
             }
 
         }
+
+        cout << "Suma pytan: " << sumaPytan << endl;
+        cout << "Poprawne odpowiedzi: " << poprawne << endl;
+
+    } else
+    {
+        cout << "Nie otwarto pliku!!!" << endl;
     }
     bazaPytan.close(); //Zamknij plik z pytaniami
-
-    cout << "Suma pytan: " << sumaPytan << endl;
-    cout << "Poprawne odpowiedzi: " << poprawne << endl;
 
     return 0;
 }
