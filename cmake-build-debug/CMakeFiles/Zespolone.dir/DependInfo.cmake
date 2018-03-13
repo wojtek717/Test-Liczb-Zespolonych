@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.cpp" "/cygdrive/c/Users/wojci/CLionProjects/Zespolone/cmake-build-debug/CMakeFiles/Zespolone.dir/InputOutput.cpp.o"
   "/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.cpp" "/cygdrive/c/Users/wojci/CLionProjects/Zespolone/cmake-build-debug/CMakeFiles/Zespolone.dir/Zespolona.cpp.o"
   "/cygdrive/c/Users/wojci/CLionProjects/Zespolone/main.cpp" "/cygdrive/c/Users/wojci/CLionProjects/Zespolone/cmake-build-debug/CMakeFiles/Zespolone.dir/main.cpp.o"
   )

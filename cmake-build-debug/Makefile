@@ -123,6 +123,33 @@ Zespolone/fast:
 	$(MAKE) -f CMakeFiles/Zespolone.dir/build.make CMakeFiles/Zespolone.dir/build
 .PHONY : Zespolone/fast
 
+InputOutput.o: InputOutput.cpp.o
+
+.PHONY : InputOutput.o
+
+# target to build an object file
+InputOutput.cpp.o:
+	$(MAKE) -f CMakeFiles/Zespolone.dir/build.make CMakeFiles/Zespolone.dir/InputOutput.cpp.o
+.PHONY : InputOutput.cpp.o
+
+InputOutput.i: InputOutput.cpp.i
+
+.PHONY : InputOutput.i
+
+# target to preprocess a source file
+InputOutput.cpp.i:
+	$(MAKE) -f CMakeFiles/Zespolone.dir/build.make CMakeFiles/Zespolone.dir/InputOutput.cpp.i
+.PHONY : InputOutput.cpp.i
+
+InputOutput.s: InputOutput.cpp.s
+
+.PHONY : InputOutput.s
+
+# target to generate assembly for a file
+InputOutput.cpp.s:
+	$(MAKE) -f CMakeFiles/Zespolone.dir/build.make CMakeFiles/Zespolone.dir/InputOutput.cpp.s
+.PHONY : InputOutput.cpp.s
+
 Zespolona.o: Zespolona.cpp.o
 
 .PHONY : Zespolona.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Zespolone"
+	@echo "... InputOutput.o"
+	@echo "... InputOutput.i"
+	@echo "... InputOutput.s"
 	@echo "... Zespolona.o"
 	@echo "... Zespolona.i"
 	@echo "... Zespolona.s"

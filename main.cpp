@@ -1,34 +1,12 @@
 #include <iostream>
 #include <cmath>
 #include "Zespolona.h"
+#include "InputOutput.h"
 #include <fstream>
 #include <getopt.h>
 
 using namespace std;
 
-/* Funkcja pytajaca uzytkownika o podanie odpowiedzi do zadanego pytania
- * z arytmtyki liczb zespolonych. Funkcja daje 3 szanse na podanie poprawnej
- * odpowiedzi w innym wypadku zwraca bledna odpowiedz*/
-Zespolona pytaj()
-{
-    Zespolona liczba(0,0); //inicjalizacja liczby zespolonej
-
-    for (int i = 0; i < 3; ++i) //Trzy szanse na podanie poprawnego formatu
-    {
-        /* Kontrola błedow */
-        try
-        {
-            cout << "Podaj wynik: ";
-            cin >> liczba;
-
-            return liczba; //Zwroc podana liczbe zespolona w poprawnym formacie
-        }
-        catch (...)
-        {
-            cout << "Podano zla liczbe zespolona " << endl;
-        }
-    }
-}
 
 int main(int argc, char **argv)
 {
@@ -112,6 +90,7 @@ int main(int argc, char **argv)
 
                 default:
                     cout << "Bledny operator";
+                    czyPoprawnyWynik = false;
                     break;
             }
 

@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.cpp">
+			<Option target="Zespolone"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.h">
+			<Option target="Zespolone"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.cpp">
 			<Option target="Zespolone"/>
 		</Unit>

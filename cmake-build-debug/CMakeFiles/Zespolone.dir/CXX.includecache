@@ -6,6 +6,16 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.cpp
+InputOutput.h
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.h
+Zespolona.h
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
+
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.h
+Zespolona.h
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
+
 /cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.cpp
 Zespolona.h
 /cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
@@ -29,6 +39,8 @@ cmath
 -
 Zespolona.h
 /cygdrive/c/Users/wojci/CLionProjects/Zespolone/Zespolona.h
+InputOutput.h
+/cygdrive/c/Users/wojci/CLionProjects/Zespolone/InputOutput.h
 fstream
 -
 getopt.h

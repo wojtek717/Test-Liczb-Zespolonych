@@ -3,4 +3,4 @@ project(Zespolone)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Zespolone main.cpp Zespolona.cpp Zespolona.h)
+add_executable(Zespolone main.cpp Zespolona.cpp Zespolona.h InputOutput.cpp InputOutput.h)
